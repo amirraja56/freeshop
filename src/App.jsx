@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
@@ -9,6 +9,7 @@ import Blogs from './pages/BlogPage';
 import Careers from './pages/Careers';
 import FAQs from './pages/FAQs';
 import Login from './pages/Login';
+import NotFound from './pages/NotFound.jsx';
 
 
 import './App.css';
@@ -24,11 +25,15 @@ function AppLayout() {
         <Header />
         <div className="page-wrapper">
           <Routes>
+            {/* Redirect root to dashboard */}
+            <Route path="/" element={<Navigate to="/dashboard" replace />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/articles" element={<Articles />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/faqs" element={<FAQs />} />
+            {/* Catch-all for unmatched routes */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </div>
@@ -43,7 +48,7 @@ function App() {
         {/* Public Login Route */}
         <Route path="/login" element={<Login />} />
 
-        {/* Protected Layout and Pages */}
+        {/* Protected Routes */}
         <Route
           path="/*"
           element={
