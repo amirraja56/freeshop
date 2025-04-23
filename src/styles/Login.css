@@ -1,0 +1,127 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+  background: url('../assets/login.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* === Page Centering === */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* === Card === */
+.login-card {
+  background: white;
+  padding: 40px 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 380px;
+}
+
+.login-logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 16px;
+}
+
+.login-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 50px;
+}
+
+.login-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.login-header p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* === Form Elements === */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  background-color: #f7f9fc;
+}
+
+.password-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.password-row a {
+  font-size: 13px;
+  color: #777;
+  text-decoration: none;
+}
+
+.password-row a:hover {
+  text-decoration: underline;
+}
+
+/* === Remember Checkbox === */
+.remember-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 24px;
+}
+
+.remember-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+/* === Button === */
+.login-btn {
+  background-color: #00b6b3;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  filter: brightness(1.1);
+  /* Lightens the button by 10% */
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}

@@ -1,0 +1,146 @@
+/* === HEADER STYLES === */
+.header {
+  position: fixed;
+  top: 0;
+  left: 250px; /* adjust if your sidebar is wider */
+  right: 0;
+  height: 64px;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 24px;
+  position: relative;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.search-bar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 300px;
+  font-size: 14px;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.notification-btn {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.user-profile-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.user-profile-wrapper:hover {
+  background-color: #f9f9f9;
+}
+
+.profile-pic {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #ddd;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 140px; /* optional - prevents layout overflow */
+}
+
+.username {
+  font-weight: 600;
+  font-size: 14px;
+  color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.role {
+  font-size: 12px;
+  color: #888;
+}
+
+.arrow-icon {
+  font-size: 12px;
+  margin-left: 4px;
+  color: #666;
+}
+
+/* === DROPDOWN header === */
+.dropdown-header {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 180px;
+  padding: 8px 0;
+  z-index: 100;
+}
+
+.dropdown-header li {
+  list-style: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-header li:hover {
+  background-color: #f2f2f2;
+}
+
+/* === Backdrop behind dropdown === */
+.dropdown-backdrop {
+  position: fixed;
+  top: 0;           /* cover header too */
+  left: 0;          /* cover sidebar too */
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2); /* more dim, no blur */
+  z-index: 99;
+}
+
+/* Update z-index to keep dropdown above backdrop */
+.dropdown-header {
+  z-index: 100;
+}
+

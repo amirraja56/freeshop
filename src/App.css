@@ -1,0 +1,30 @@
+/* App.css */
+
+.app-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar-container {
+  width: 250px;
+  color: white;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper {
+  flex: 1;
+  padding: 60px 20px 20px 20px;
+  background: url('./assets/body.png');
+  background-color: #f4f4f4;
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow-y: auto;
+}
+

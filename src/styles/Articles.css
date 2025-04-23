@@ -1,0 +1,116 @@
+.articles-page {
+  /* background: #f4f4f4; */
+  padding: 0px 20px;
+  min-height: 100vh;
+}
+
+.articles-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.add-btn {
+  background: #00c1a6;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.delete-btn {
+  background: #ff4d6d;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.articles-table {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f3f3f3;
+}
+
+th, td {
+  padding: 12px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+td img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+td:nth-child(4) {
+  white-space: normal;
+  word-break: break-word;
+  max-width: 300px;
+}
+
+/* Flex container for inline buttons */
+td .action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn, .delete-btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #00c1a6;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #ff4d6d;
+  color: white;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #666;
+}
+
+.pages {
+  display: flex;
+  flex-direction: row;
+}
+
+.pages button {
+  margin-left: 5px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 4px;
+}
